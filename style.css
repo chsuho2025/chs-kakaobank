@@ -83,6 +83,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
 }
 
 html {
@@ -128,7 +129,7 @@ button {
   margin: 0;
   font-size: clamp(58px, 10vw, 144px);
   line-height: 0.95;
-  font-weight: 950;
+  font-weight: 700;
   letter-spacing: 0;
   color: transparent;
   background-image: linear-gradient(90deg, #ff8a00, #ffe500, #ffb000, #ff6b00, #ffe500);
@@ -143,14 +144,14 @@ button {
   display: block;
   margin-top: 12px;
   font-size: 0.28em;
-  font-weight: 850;
+  font-weight: 500;
 }
 
 .intro-copy p {
   margin: 30px 0 0;
   color: var(--muted);
   font-size: clamp(14px, 1.7vw, 22px);
-  font-weight: 750;
+  font-weight: 400;
   line-height: 1.45;
 }
 
@@ -175,7 +176,7 @@ button {
 
 .intro-button span {
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 500;
 }
 
 .intro-button i {
@@ -245,14 +246,14 @@ body.viewer-ended .book-stage {
   margin: 0;
   color: var(--muted);
   font-size: 12px;
-  font-weight: 850;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .viewer-head strong {
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 500;
 }
 
 .thanks-screen {
@@ -288,7 +289,7 @@ body.viewer-ended .thanks-screen {
   margin: 0;
   font-size: clamp(46px, 8vw, 104px);
   line-height: 1;
-  font-weight: 950;
+  font-weight: 600;
 }
 
 .thanks-screen button {
@@ -300,7 +301,7 @@ body.viewer-ended .thanks-screen {
   color: var(--ink);
   cursor: pointer;
   font-size: 14px;
-  font-weight: 850;
+  font-weight: 500;
   box-shadow: 0 14px 36px rgba(23, 23, 23, 0.08);
 }
 
@@ -430,7 +431,7 @@ body.viewer-ended .thanks-screen {
   color: var(--ink);
   cursor: pointer;
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 500;
 }
 
 .progress {
