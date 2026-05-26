@@ -9,6 +9,7 @@
 - `style.css`: 레이아웃, 반응형, 모션 스타일
 - `script.js`: 인트로 전환, 슬라이드 넘김 기능
 - `assets/slides`: 목차 페이지를 제외한 PDF 슬라이드 이미지
+- `assets/fonts`: Pretendard 웹폰트 파일
 
 ## 배포 방법
 
