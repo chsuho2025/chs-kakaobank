@@ -3,506 +3,54 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>최수호 포트폴리오</title>
+    <title>프롬뱅크 포트폴리오</title>
     <meta
       name="description"
-      content="카카오뱅크 AI 서비스 기획 어시스턴트 지원을 위한 프롬뱅크 프로젝트 포트폴리오입니다."
+      content="카카오뱅크 AI 서비스 기획 어시스턴트 지원을 위한 프롬뱅크 PDF 포트폴리오 뷰어입니다."
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <section class="intro-screen" aria-label="포트폴리오 시작 화면">
       <div class="intro-copy">
-        <p>최수호 포트폴리오</p>
-        <h1>카카오뱅크 AI 서비스 기획 어시스턴트</h1>
+        <h1>프롬뱅크<span>(prombank)</span></h1>
+        <p>카카오뱅크 AI 서비스 기획 어시스턴트 / 포트폴리오</p>
       </div>
-      <button class="intro-arrow" type="button" aria-label="프롬뱅크 포트폴리오 보기">
-        <span></span>
+      <button class="intro-button" type="button" aria-label="프롬뱅크 포트폴리오 보기">
+        <span>portfolio open</span>
+        <i></i>
       </button>
     </section>
 
-    <main class="portfolio" id="portfolio">
-      <section class="pdf-page cover-page" aria-label="프롬뱅크 표지">
-        <div class="page-meta" data-animate="fade-up">PROMBANK MVP TEST REPORT</div>
-        <div class="cover-layout">
-          <div data-animate="slide-left">
-            <p class="eyebrow">생성형 AI 사용자를 위한 프롬프트 클라우드</p>
-            <h2>프롬뱅크</h2>
-            <p class="lead">
-              좋은 AI 응답을 얻기 위해 먼저 좋은 질문 구조가 필요하다는 문제의식에서 출발한
-              프롬프트 공유 플랫폼입니다.
-            </p>
-          </div>
-          <div class="brand-block" data-animate="scale-in">prombank</div>
+    <main class="viewer" id="viewer" aria-label="프롬뱅크 PDF 포트폴리오 뷰어">
+      <section class="book-stage">
+        <div class="viewer-head">
+          <p>prombank portfolio</p>
+          <strong><span id="currentPage">1</span> / <span id="totalPages">23</span></strong>
         </div>
-      </section>
 
-      <section class="pdf-page chapter-page" aria-label="프롬뱅크 소개">
-        <span class="chapter-number" data-animate="fade-up">01</span>
-        <div data-animate="fade-up">
-          <p class="eyebrow">프롬뱅크 소개</p>
-          <h2>문제 정의,<br />솔루션,<br />시장 기회</h2>
-        </div>
-      </section>
+        <div class="book" aria-live="polite">
+          <button class="page-button prev" type="button" aria-label="이전 슬라이드">
+            <span></span>
+          </button>
 
-      <section class="pdf-page" aria-label="문제 정의">
-        <div class="page-title" data-animate="fade-up">
-          <span>문제 정의</span>
-          <h2>모호한 프롬프트는 AI 응답의 질을 낮춘다</h2>
-          <p>
-            프롬뱅크는 생성형 AI 사용자가 자주 겪는
-            “프롬프트 엔지니어링이 어렵고, 참고할 만한 정보가 부족하다”는 문제를
-            해결하기 위해 시작했습니다.
-          </p>
-        </div>
-        <div class="compare-board">
-          <article class="prompt-card weak" data-animate="slide-left">
-            <p>모호한 요청</p>
-            <strong>물병 판매를 위한 마케팅 아이디어 알려줘</strong>
-            <ul>
-              <li>요청 범위가 넓음</li>
-              <li>대상과 목적이 불분명함</li>
-              <li>원하는 결과 형식이 없음</li>
-            </ul>
-          </article>
-          <div class="versus" data-animate="scale-in">VS</div>
-          <article class="prompt-card strong" data-animate="slide-right">
-            <p>구체적인 요청</p>
-            <strong>
-              친환경 물병 마케팅 블로그 아이디어를 알려줘. 대상 고객, 주요 메시지,
-              활용 채널을 함께 정리해줘.
-            </strong>
-            <ul>
-              <li>목적과 조건이 분명함</li>
-              <li>필요한 세부 정보가 있음</li>
-              <li>결과물 기준을 예측할 수 있음</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="핵심 솔루션">
-        <div class="page-title" data-animate="fade-up">
-          <span>솔루션</span>
-          <h2>프롬뱅크 핵심 솔루션</h2>
-        </div>
-        <div class="solution-grid">
-          <article data-animate="rise-card">
-            <i class="check"></i>
-            <h3>프롬프트 템플릿</h3>
-            <p>사용자가 높은 품질의 응답을 얻을 수 있도록 목적별 프롬프트 구조를 제공합니다.</p>
-          </article>
-          <article data-animate="rise-card">
-            <i class="check"></i>
-            <h3>AI 트렌드 뉴스</h3>
-            <p>생성형 AI 관련 동향과 기술 정보를 함께 제공해 사용자의 활용 맥락을 넓힙니다.</p>
-          </article>
-          <article data-animate="rise-card">
-            <i class="check"></i>
-            <h3>카카오톡 채널</h3>
-            <p>이메일 뉴스레터보다 접근성이 높은 채널을 활용해 사용자와 지속적으로 만납니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="시장 기회">
-        <div class="page-title" data-animate="fade-up">
-          <span>시장 기회</span>
-          <h2>빠르게 커지는 생성형 AI 활용 수요</h2>
-        </div>
-        <div class="market-grid">
-          <article class="chart-card" data-animate="fade-up">
-            <h3>국내 생성형 AI 시장 성장</h3>
-            <div class="bar-chart" aria-hidden="true">
-              <i style="height: 28%"></i>
-              <i style="height: 40%"></i>
-              <i style="height: 52%"></i>
-              <i style="height: 66%"></i>
-              <i style="height: 82%"></i>
+          <figure class="page-frame">
+            <div class="page-sheet">
+              <img id="slideImage" src="./assets/slides/page_01.jpg" alt="프롬뱅크 PDF 1페이지" />
             </div>
-            <p>AI 서비스를 실제 업무와 학습에 활용하려는 사용자가 늘고 있습니다.</p>
-          </article>
-          <article class="chart-card" data-animate="fade-up">
-            <h3>프롬프트 엔지니어링 관심 증가</h3>
-            <div class="line-chart" aria-hidden="true">
-              <span style="left: 4%; bottom: 18%"></span>
-              <span style="left: 26%; bottom: 34%"></span>
-              <span style="left: 50%; bottom: 48%"></span>
-              <span style="left: 72%; bottom: 62%"></span>
-              <span style="left: 92%; bottom: 78%"></span>
-            </div>
-            <p>좋은 질문을 만드는 방법 자체가 하나의 학습 주제가 되었습니다.</p>
-          </article>
-          <article class="chart-card competitor" data-animate="fade-up">
-            <h3>미개척 국내 시장</h3>
-            <div>
-              <b>gpTable</b>
-              <span>GPT 활용 경험 공유</span>
-            </div>
-            <div>
-              <b>OpenPrompt</b>
-              <span>오픈소스 프롬프트 제공</span>
-            </div>
-            <div>
-              <b>PromptHero</b>
-              <span>이미지 생성 프롬프트 특화</span>
-            </div>
-            <p>국내 사용자에게 맞춘 프롬프트 플랫폼은 아직 초기 단계라고 판단했습니다.</p>
-          </article>
-        </div>
-      </section>
+          </figure>
 
-      <section class="pdf-page chapter-page" aria-label="기능 개요">
-        <span class="chapter-number" data-animate="fade-up">02</span>
-        <div data-animate="fade-up">
-          <p class="eyebrow">기능 개요</p>
-          <h2>프롬프트 템플릿,<br />AI 트렌드 큐레이션</h2>
+          <button class="page-button next" type="button" aria-label="다음 슬라이드">
+            <span></span>
+          </button>
         </div>
-      </section>
 
-      <section class="pdf-page feature-page" aria-label="프롬프트 템플릿">
-        <div class="feature-copy" data-animate="slide-left">
-          <p class="eyebrow">주기능</p>
-          <h2>프롬프트 템플릿</h2>
-          <p>
-            비즈니스, 교육, 창작 등 여러 분야에서 필요한 프롬프트를 쉽게 선택하고
-            활용할 수 있도록 구성했습니다.
-          </p>
-          <div class="tag-row">
-            <span>비즈니스</span>
-            <span>교육</span>
-            <span>창작</span>
-            <span>마케팅</span>
+        <div class="viewer-controls">
+          <button class="text-button" id="prevButton" type="button">이전</button>
+          <div class="progress" aria-hidden="true">
+            <i id="progressBar"></i>
           </div>
-        </div>
-        <div class="device-area" data-animate="scale-in">
-          <div class="laptop">
-            <div class="browser-top">prombank</div>
-            <h3>소설 및 이야기 흐름 생성하기</h3>
-            <div class="mock-image"></div>
-            <p>창작의 벽을 넘어서기 위한 프롬프트 템플릿</p>
-            <button type="button">프롬프트 보기</button>
-          </div>
-          <div class="phone">
-            <div class="phone-top">prombank</div>
-            <h3>추천 템플릿</h3>
-            <ul>
-              <li>콘텐츠 아이디어 정리</li>
-              <li>보고서 초안 작성</li>
-              <li>마케팅 문구 개선</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="pdf-page feature-page reverse" aria-label="AI 트렌드 큐레이션">
-        <div class="feature-copy" data-animate="slide-right">
-          <p class="eyebrow">부기능 Beta</p>
-          <h2>AI 트렌드 큐레이션</h2>
-          <p>
-            최신 AI 동향과 기술 정보를 제공합니다. 사용자는 웹링크를 통해 관련 뉴스와
-            업데이트를 확인할 수 있습니다.
-          </p>
-        </div>
-        <div class="news-board" data-animate="wipe-in">
-          <article>
-            <span>AI TREND</span>
-            <strong>새로운 모델 업데이트</strong>
-            <p>주요 기능 변화와 활용 가능성을 짧게 정리합니다.</p>
-          </article>
-          <article>
-            <span>AI NEWS</span>
-            <strong>생성형 AI 서비스 사례</strong>
-            <p>국내외 서비스 적용 사례를 사용자의 언어로 큐레이션합니다.</p>
-          </article>
-          <article>
-            <span>AI GUIDE</span>
-            <strong>프롬프트 활용 팁</strong>
-            <p>사용자가 바로 적용해볼 수 있는 질문 구조를 함께 제공합니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page chapter-page" aria-label="MVP 검증">
-        <span class="chapter-number" data-animate="fade-up">03</span>
-        <div data-animate="fade-up">
-          <p class="eyebrow">MVP 검증</p>
-          <h2>성과,<br />시장성</h2>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="사용자 참여 성과">
-        <div class="page-title" data-animate="fade-up">
-          <span>사용자 참여 성과</span>
-          <h2>초기 사용 흐름 확인</h2>
-          <p>
-            MVP 운영에서는 방문자가 어떤 콘텐츠에 머무르고 다시 돌아오는지 확인했습니다.
-            구체적인 수치보다 사용자 반응의 방향을 중심으로 해석했습니다.
-          </p>
-        </div>
-        <div class="metric-grid qualitative">
-          <article data-animate="rise-card">
-            <b>방문</b>
-            <strong>탐색 흐름 발생</strong>
-            <p>프롬프트 템플릿과 AI 트렌드 콘텐츠를 함께 살펴보는 흐름이 나타났습니다.</p>
-          </article>
-          <article data-animate="rise-card">
-            <b>활성</b>
-            <strong>콘텐츠 소비 확인</strong>
-            <p>사용자는 단순 진입보다 목적에 맞는 템플릿 확인에 더 반응했습니다.</p>
-          </article>
-          <article data-animate="rise-card">
-            <b>재방문</b>
-            <strong>지속 접점 가능성</strong>
-            <p>반복적으로 참고할 수 있는 프롬프트 저장소의 가능성을 확인했습니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="전환 성과">
-        <div class="page-title" data-animate="fade-up">
-          <span>전환 성과</span>
-          <h2>멤버십 관심 확인</h2>
-          <p>
-            프롬프트 품질과 카카오톡 채널 접근성이 결합될 때 사용자가 멤버십 형태의
-            접점에도 반응할 수 있다는 가능성을 보았습니다.
-          </p>
-        </div>
-        <div class="funnel" data-animate="wipe-in">
-          <div><span>서비스 방문</span></div>
-          <div><span>콘텐츠 탐색</span></div>
-          <div><span>채널 접점</span></div>
-          <div><span>멤버십 관심</span></div>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="유지 및 이탈 성과">
-        <div class="page-title" data-animate="fade-up">
-          <span>유지·이탈 성과</span>
-          <h2>이탈 이유를 개선 기준으로 정리</h2>
-        </div>
-        <div class="reason-board">
-          <article data-animate="slide-left">
-            <h3>유지 요인</h3>
-            <ul>
-              <li>업무와 학습에 바로 참고할 수 있는 프롬프트</li>
-              <li>카카오톡을 통한 쉬운 접근</li>
-              <li>AI 동향을 함께 확인할 수 있는 구성</li>
-            </ul>
-          </article>
-          <article data-animate="slide-right">
-            <h3>이탈 요인</h3>
-            <ul>
-              <li>알림 빈도에 대한 부담</li>
-              <li>사용 목적과 맞지 않는 프롬프트 품질</li>
-              <li>서비스 필요성에 대한 낮은 확신</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="고객 획득 성과">
-        <div class="page-title" data-animate="fade-up">
-          <span>고객 획득 성과</span>
-          <h2>제한된 예산 안에서 유입 경로 검증</h2>
-          <p>
-            링크형 광고와 핵심 키워드를 활용해 초기 사용자가 어떤 메시지에 반응하는지 확인했습니다.
-            운영 결과는 이후 마케팅 문구와 채널 전략을 조정하는 기준으로 삼았습니다.
-          </p>
-        </div>
-        <div class="campaign-board" data-animate="wipe-in">
-          <div>
-            <b>검색 키워드</b>
-            <span>프롬프트 · 생성형 AI · ChatGPT 활용</span>
-          </div>
-          <div>
-            <b>광고 방식</b>
-            <span>링크형 광고와 간결한 CTA 중심</span>
-          </div>
-          <div>
-            <b>해석 기준</b>
-            <span>클릭보다 이후 탐색 흐름과 전환 가능성 확인</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="시장성">
-        <div class="page-title" data-animate="fade-up">
-          <span>시장성</span>
-          <h2>초기 시장성 판단</h2>
-        </div>
-        <div class="marketability-grid">
-          <article data-animate="rise-card">
-            <h3>높은 전환 가능성</h3>
-            <p>고품질 프롬프트와 접근성 높은 카카오톡 채널, 한시적 무료 제공이 초기 반응에 영향을 주었습니다.</p>
-          </article>
-          <article data-animate="rise-card">
-            <h3>높은 메시지 반응</h3>
-            <p>프롬프트 일부를 발췌하고 바로 확인할 수 있는 CTA를 배치해 클릭 행동을 유도했습니다.</p>
-          </article>
-          <article data-animate="rise-card">
-            <h3>낮은 고객 획득 부담</h3>
-            <p>광고 키워드를 간소화하고 예산을 제한해 초기 검증 비용을 낮추는 방향으로 운영했습니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page split-page" aria-label="전환율 분석">
-        <div data-animate="slide-left">
-          <p class="eyebrow">시장성</p>
-          <h2>높은 전환 가능성</h2>
-          <p>
-            기존 시장에 없던 프롬프트 큐레이션과 접근성 높은 커뮤니케이션 채널이
-            초기 사용자 반응을 만드는 요인으로 작동했습니다.
-          </p>
-        </div>
-        <div class="comparison-bars" data-animate="slide-right">
-          <div><span>일반 콘텐츠 서비스</span><i style="width: 44%"></i></div>
-          <div><span>커뮤니티 기반 서비스</span><i style="width: 58%"></i></div>
-          <div><span>프롬뱅크 MVP</span><i style="width: 78%"></i></div>
-        </div>
-      </section>
-
-      <section class="pdf-page split-page" aria-label="톡 마케팅 지표">
-        <div data-animate="slide-left">
-          <p class="eyebrow">시장성</p>
-          <h2>높은 메시지 반응</h2>
-          <p>
-            카카오톡 채널의 간편함과 프롬프트 미리보기 방식은 사용자가 콘텐츠를
-            빠르게 확인하도록 만드는 데 도움이 되었습니다.
-          </p>
-        </div>
-        <div class="message-preview" data-animate="slide-right">
-          <span>prombank</span>
-          <strong>오늘의 프롬프트가 도착했습니다</strong>
-          <p>보고서 초안을 더 빠르게 정리하는 질문 구조를 확인해보세요.</p>
-          <button type="button">프롬프트 확인</button>
-        </div>
-      </section>
-
-      <section class="pdf-page split-page" aria-label="고객 획득 비용">
-        <div data-animate="slide-left">
-          <p class="eyebrow">시장성</p>
-          <h2>낮은 고객 획득 부담</h2>
-          <p>
-            적은 예산으로도 반응을 확인할 수 있도록 키워드를 좁히고,
-            사용자가 이해하기 쉬운 문구를 중심으로 유입을 테스트했습니다.
-          </p>
-        </div>
-        <div class="cost-board" data-animate="slide-right">
-          <div><b>키워드 단순화</b><span>핵심 검색 의도 중심</span></div>
-          <div><b>문구 테스트</b><span>기능보다 사용 상황 강조</span></div>
-          <div><b>유입 해석</b><span>클릭 이후 행동까지 확인</span></div>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="경쟁 우위">
-        <div class="page-title" data-animate="fade-up">
-          <span>경쟁 우위</span>
-          <h2>품질의 힘과 소통의 힘</h2>
-        </div>
-        <div class="advantage-grid">
-          <article data-animate="slide-left">
-            <h3>엄선된 고품질 프롬프트</h3>
-            <p>지속적인 리서치와 AI 모델 변화 추적을 통해 프롬프트 품질을 업데이트하는 구조를 고려했습니다.</p>
-          </article>
-          <article data-animate="slide-right">
-            <h3>이메일 대신 카카오톡</h3>
-            <p>접근성이 높은 채널을 활용해 낮은 비용으로 사용자의 피드백과 재방문을 유도하고자 했습니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="재무 계획">
-        <div class="page-title" data-animate="fade-up">
-          <span>재무 계획</span>
-          <h2>운영 비용과 확장 항목 정리</h2>
-          <p>
-            MVP 단계에서는 개발, 디자인, 마케팅, 운영 비용을 구분해 관리했습니다.
-            공개 포트폴리오에서는 세부 금액 대신 비용 항목과 검토 구조를 중심으로 정리했습니다.
-          </p>
-        </div>
-        <div class="finance-table" data-animate="wipe-in">
-          <div><b>개발</b><span>서비스 구축, 기능 개선, 데이터 관리</span></div>
-          <div><b>디자인</b><span>브랜드 톤, 웹 화면, 콘텐츠 시각화</span></div>
-          <div><b>마케팅</b><span>검색 광고, 카카오톡 채널, 콘텐츠 발행</span></div>
-          <div><b>운영</b><span>콘텐츠 검수, 사용자 피드백, 유지보수</span></div>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="비즈니스 모델">
-        <div class="page-title" data-animate="fade-up">
-          <span>비즈니스 모델</span>
-          <h2>멤버십에서 확장 모델로</h2>
-        </div>
-        <div class="model-grid">
-          <article class="membership-card" data-animate="scale-in">
-            <span>prombank membership</span>
-            <strong>구독형 멤버십</strong>
-            <p>초기에는 무료 제공을 통해 사용 흐름을 검증하고, 이후 기능과 콘텐츠 수준에 따라 유료화 가능성을 검토했습니다.</p>
-          </article>
-          <div class="model-list" data-animate="slide-right">
-            <div>웹 디스플레이 광고</div>
-            <div>전문가 커뮤니티</div>
-            <div>프리미엄 프롬프트</div>
-            <div>멤버십 계층화</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="리스크 관리">
-        <div class="page-title" data-animate="fade-up">
-          <span>리스크 관리</span>
-          <h2>시장 리스크와 재무 리스크</h2>
-        </div>
-        <div class="risk-grid">
-          <article data-animate="slide-left">
-            <h3>시장 리스크</h3>
-            <p>새로운 경쟁자와 기존 서비스의 공격적인 마케팅이 진입 장벽으로 작용할 수 있습니다.</p>
-            <b>대응</b>
-            <p>속도보다 품질을 중심에 두고, 사용자가 다시 찾을 이유를 만드는 데 집중합니다.</p>
-          </article>
-          <article data-animate="slide-right">
-            <h3>재무 리스크</h3>
-            <p>광고 수익 부진이나 트래픽 하락은 운영 지속성에 영향을 줄 수 있습니다.</p>
-            <b>대응</b>
-            <p>기업·교육기관 협업과 콘텐츠 제휴를 통해 수익 구조를 다변화합니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page" aria-label="로드맵">
-        <div class="page-title" data-animate="fade-up">
-          <span>로드맵</span>
-          <h2>사용자 기반에서 네트워크로</h2>
-        </div>
-        <div class="roadmap">
-          <article data-animate="rise-card">
-            <span>1단계</span>
-            <h3>사용자 기반 확립</h3>
-            <p>프롬프트 템플릿을 지속 개발하고, AI 트렌드 큐레이션을 정식 기능으로 안정화합니다.</p>
-          </article>
-          <article data-animate="rise-card">
-            <span>2단계</span>
-            <h3>수익성 극대화</h3>
-            <p>멤버십 유료화, 광고, 자체 대시보드, 피드백 기반 최적화를 검토합니다.</p>
-          </article>
-          <article data-animate="rise-card">
-            <span>3단계</span>
-            <h3>쌍방향 네트워크 구축</h3>
-            <p>다양한 AI 모델과 사용자 제작 프롬프트, 커뮤니티 기능으로 확장합니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="pdf-page closing-page" aria-label="마무리">
-        <div data-animate="fade-up">
-          <p class="eyebrow">PROMBANK</p>
-          <h2>나도 이제<br />프롬프트 엔지니어!</h2>
-          <p>
-            프롬뱅크는 생성형 AI 사용자가 더 좋은 질문 구조를 찾고,
-            자신의 목적에 맞게 AI를 활용하도록 돕는 실험이었습니다.
-          </p>
+          <button class="text-button" id="nextButton" type="button">다음</button>
         </div>
       </section>
     </main>
