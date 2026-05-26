@@ -147,6 +147,17 @@ body.viewer-open .viewer {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 22px;
+  transition:
+    opacity 720ms var(--ease),
+    transform 720ms var(--ease),
+    visibility 720ms var(--ease);
+}
+
+body.viewer-ended .book-stage {
+  opacity: 0;
+  transform: translateY(-22px);
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .viewer-head,
@@ -169,6 +180,55 @@ body.viewer-open .viewer {
 .viewer-head strong {
   font-size: 13px;
   font-weight: 850;
+}
+
+.thanks-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(24px);
+  transition:
+    opacity 720ms var(--ease),
+    transform 720ms var(--ease),
+    visibility 720ms var(--ease);
+}
+
+body.viewer-ended .thanks-screen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.thanks-screen div {
+  width: min(620px, calc(100% - 48px));
+  text-align: center;
+}
+
+.thanks-screen h2 {
+  margin: 0;
+  font-size: clamp(46px, 8vw, 104px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.thanks-screen button {
+  margin-top: 34px;
+  padding: 13px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 850;
+  box-shadow: 0 14px 36px rgba(23, 23, 23, 0.08);
 }
 
 .book {

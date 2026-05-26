@@ -29,16 +29,20 @@ const introButton = document.querySelector(".intro-button");
 const viewer = document.querySelector("#viewer");
 const slideImage = document.querySelector("#slideImage");
 const pageSheet = document.querySelector(".page-sheet");
-const currentPage = document.querySelector("#currentPage");
-const totalPages = document.querySelector("#totalPages");
 const progressBar = document.querySelector("#progressBar");
 const prevButtons = document.querySelectorAll(".prev, #prevButton");
 const nextButtons = document.querySelectorAll(".next, #nextButton");
+const restartButton = document.querySelector("#restartButton");
 
 let index = 0;
 let opened = false;
+let endingTimer;
 
-totalPages.textContent = String(slides.length);
+const preloadedSlides = slides.map((file) => {
+  const image = new Image();
+  image.src = `./assets/slides/${file}`;
+  return image;
+});
 
 function openViewer() {
   if (opened) return;
@@ -52,16 +56,16 @@ function openViewer() {
 }
 
 function updateSlide(direction = "next") {
-  slideImage.src = `./assets/slides/${slides[index]}`;
+  window.clearTimeout(endingTimer);
+  slideImage.src = preloadedSlides[index].src;
   slideImage.alt = `프롬뱅크 PDF ${index + 1}페이지`;
-  currentPage.textContent = String(index + 1);
   progressBar.style.width = `${((index + 1) / slides.length) * 100}%`;
 
   prevButtons.forEach((button) => {
     button.disabled = index === 0;
   });
   nextButtons.forEach((button) => {
-    button.disabled = index === slides.length - 1;
+    button.disabled = false;
   });
 
   pageSheet.classList.remove("turn-next", "turn-prev");
@@ -71,9 +75,28 @@ function updateSlide(direction = "next") {
 
 function moveSlide(direction) {
   const nextIndex = index + direction;
-  if (nextIndex < 0 || nextIndex >= slides.length) return;
+  if (nextIndex < 0) return;
+  if (nextIndex >= slides.length) {
+    finishViewer();
+    return;
+  }
   index = nextIndex;
   updateSlide(direction < 0 ? "prev" : "next");
+}
+
+function finishViewer() {
+  window.clearTimeout(endingTimer);
+  endingTimer = window.setTimeout(() => {
+    body.classList.add("viewer-ended");
+  }, 1000);
+}
+
+function restartViewer() {
+  window.clearTimeout(endingTimer);
+  index = 0;
+  body.classList.remove("viewer-ended");
+  updateSlide("prev");
+  viewer.scrollIntoView({ block: "start" });
 }
 
 introButton.addEventListener("click", openViewer);
@@ -90,6 +113,7 @@ window.addEventListener("touchmove", openViewer, { passive: true, once: true });
 
 prevButtons.forEach((button) => button.addEventListener("click", () => moveSlide(-1)));
 nextButtons.forEach((button) => button.addEventListener("click", () => moveSlide(1)));
+restartButton.addEventListener("click", restartViewer);
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") {
